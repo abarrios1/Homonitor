@@ -9,6 +9,8 @@ import {
 import { AccountCircle } from '@material-ui/icons';
 import { withAuth } from '@okta/okta-react';
 
+import WelcomeUser from './WelcomeUser';
+
 class LoginButton extends Component {
   state = {
     authenticated: null,
@@ -45,7 +47,7 @@ class LoginButton extends Component {
     const { authenticated, user, menuAnchorEl } = this.state;
 
     if (authenticated === null) return null;
-    if (!authenticated) return <Button color="inherit" onClick={this.login}>Login</Button>;
+    if (!authenticated) return <Button background-color="#e7e7e7" color="inherit" onClick={this.login}>Login</Button>;
 
     const menuPosition = {
       vertical: 'top',
@@ -54,6 +56,7 @@ class LoginButton extends Component {
 
     return (
       <div>
+        <WelcomeUser name={user.name}></WelcomeUser>
         <IconButton onClick={this.handleMenuOpen} color="inherit">
           <AccountCircle />
         </IconButton>

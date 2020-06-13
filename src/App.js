@@ -2,12 +2,11 @@ import React, { Fragment } from 'react';
 import { Route } from 'react-router-dom';
 import { ImplicitCallback } from '@okta/okta-react';
 import {
-  CssBaseline,
   withStyles,
 } from '@material-ui/core';
 
-import AppHeader from './components/AppHeader';
 import Home from './pages/Home';
+import Navigation from './components/NavigationBar';
 
 const styles = theme => ({
   main: {
@@ -20,8 +19,13 @@ const styles = theme => ({
 
 const App = ({ classes }) => (
   <Fragment>
-    <CssBaseline />
-    <AppHeader />
+    <link
+      rel="stylesheet"
+      href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.0/css/bootstrap.min.css"
+      integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
+      crossOrigin="anonymous"
+    />
+    <Navigation />
     <main className={classes.main}>
       <Route exact path="/" component={Home} />
       <Route path="/implicit/callback" component={ImplicitCallback} />

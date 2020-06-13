@@ -1,8 +1,7 @@
 import React from 'react';
-import {
-    Typography,
-} from '@material-ui/core';
 
 export default () => (
-    <Typography variant='h4'>Welcome Home!</Typography>
+    <h2>
+       This is your home page 
+    </h2>
 )

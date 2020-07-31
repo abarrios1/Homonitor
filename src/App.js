@@ -6,6 +6,8 @@ import {
 } from '@material-ui/core';
 
 import Home from './pages/Home';
+import NetworkStats from './pages/NetworkStats'
+import About from './pages/About'
 import Navigation from './components/NavigationBar';
 
 const styles = theme => ({
@@ -28,6 +30,8 @@ const App = ({ classes }) => (
     <Navigation />
     <main className={classes.main}>
       <Route exact path="/" component={Home} />
+      <Route exact path="/netstats" component={NetworkStats} />
+      <Route exact path="/about" component={About} />
       <Route path="/implicit/callback" component={ImplicitCallback} />
     </main>
   </Fragment>

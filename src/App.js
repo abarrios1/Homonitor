@@ -13,7 +13,7 @@ import Navigation from './components/NavigationBar';
 const styles = theme => ({
   main: {
     padding: theme.spacing(3),
-    [theme.breakpoints.down('xs')]: {
+    [theme.breakpoints.down('m')]: {
       padding: theme.spacing(2),
     },
   },

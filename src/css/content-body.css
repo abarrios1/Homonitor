@@ -1,0 +1,30 @@
+/* CSS property for content section */
+.sidebar {
+    float: left;
+    width: 30%;
+    height: 100%;
+    padding: 15px;
+    text-align:justify;
+    border-style: solid;
+    border-color: black;
+}
+
+.maincontent {
+    float: left;
+    width: 70%;
+    padding: 15px;
+    text-align:justify;
+}
+
+/* Media query to set website layout
+according to screen size */
+@media screen and (max-width:600px) {
+    .sidebar, .maincontent, .othersidebar {
+        width: 50%;
+    }
+}
+@media screen and (max-width:400px) {
+    .sidebar, .maincontent, .othersidebar {
+        width: 100%;
+    }
+}
